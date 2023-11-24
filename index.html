@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,18 +17,18 @@
             <div class="logo">
                 <a href="#Start">Camilo Montiel</a>
             </div>
-            <nav id="nav">
+            <nav id="nav" onclick="seleccionar()">
                 <ul>
-                    <li><a class="desplazar" href="#start">Start</a></li>
-                    <li><a class="desplazar" href="#about_me">About me</a></li>
-                    <li><a class="desplazar" href="#skills">Skills</a></li>
-                    <li><a class="desplazar" href="#curriculum">Curriculum</a></li>
-                    <li><a class="desplazar" href="#portfolio">Portfolio</a></li>
-                    <li><a class="desplazar" href="#contact">Contact</a></li>
+                    <li><a class="desplazar" href="#start" onclick="seleccionar()">Start</a></li>
+                    <li><a class="desplazar" href="#about_me" onclick="seleccionar()">About me</a></li>
+                    <li><a class="desplazar" href="#skills" onclick="seleccionar()">Skills</a></li>
+                    <li><a class="desplazar" href="#curriculum" onclick="seleccionar()">Curriculum</a></li>
+                    <li><a class="desplazar" href="#portfolio" onclick="seleccionar()">Portfolio</a></li>
+                    <li><a class="desplazar" href="#contact" onclick="seleccionar()">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="nav-responsive">
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
@@ -127,7 +127,7 @@
                         <span>Communication</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>80%</span>
+                                <span>90%</span>
                             </div>
                         </div>
                     </div>
@@ -169,10 +169,157 @@
                     </div>
 
                 </div>
+                    <div class="skill english-progress">
+                        <h3>Languages</h3>
+                        <span>English</span>
+                        <div class="barra-skill">
+                            <span class="span1 s">A1</span>
+                            <span class="span2 s">A2</span>
+                            <div class="progreso">
+                                <span>B1</span>
+                            </div>
+                            <span class="span3 s">B2</span>
+                            <span class="span4 s">C1</span>
+                            <span class="span5 s">C2</span>
+                        </div>
+                    </div>
 
             </div>
         </div>
     </section>
+
+    <!-- SECTION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Education</h3>
+                    <div class="item izq">
+                        <h4>Web development / Proyects</h4>
+                        <span class="institution">Platzi</span>
+                        <span class="fecha">2022</span>
+                        <p>Website and project development in front-end and back-end
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div></p>
+                    </div>
+                    <div class="item izq">
+                        <h4>Technologist</h4>
+                        <span class="institution">Sena</span>
+                        <span class="fecha">2018 - 2021</span>
+                        <p>Analysis and development of information systems and development of web applications</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Work experience</h3>
+                    <div class="item der">
+                        <h4>Front-end developer</h4>
+                        <span class="business">Independent</span>
+                        <span class="fecha">2022</span>
+                        <p>Two years of experience creating elegant websites for multiple businesses, brands and personal sites.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portfolio</h2>
+            <div class="galeria">
+
+                <div class="container-proyect">
+                    <h3>VideoGame</h3>
+                    <div class="proyecto">
+                        <img src="IMG/VideoGameImg.jpg" alt="video_game_img">
+                        <a href="https://65611a38fdb1c32efd781960--darling-flan-5ec830.netlify.app/" target="_blank">
+                            <div class="overlay">
+                                <h3>VideoGame</h3>
+                                <p>Made with canvas and javascript</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="container-proyect">
+                    <h3>E-commerce</h3>
+                    <div class="proyecto">
+                        <img src="IMG/E-commerce.jpg" alt="e-commerce_img">
+                        <a href="https://glowing-mousse-a291b8.netlify.app/" target="_blank">
+                            <div class="overlay">
+                                <h3>E-commerce</h3>
+                                <p>Made with javascript</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="container-proyect">
+                    <h3>Calculator</h3>
+                    <div class="proyecto">
+                        <img src="IMG/Calculator.jpg" alt="calculator_img"></a>
+                        <a href="https://65611a0aaf5aa3316698dc2a--splendid-phoenix-10b4c9.netlify.app/" target="_blank">
+                            <div class="overlay">
+                                <h3>Calculator</h3>
+                                <p>Made with javascript</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="contact">
+        <div class="contenido-seccion">
+            <h2>Contact</h2>
+            <div class="fila">
+                <!-- Form -->
+                <div class="col">
+                    <form action="https://formsubmit.co/22519c7bde277309264bc2822ff487eb" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="number" name="phone" placeholder="Phone Number" required>
+                        <input type="text" name="email" placeholder="Email" required>
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                        <button id="btn" type="submit"> 
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>  
+
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html#contact">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FOOTER -->
+    <footer>
+        <a href="#start" class="up desplazar">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://api.whatsapp.com/send?phone=573214912269&text=Hola,%20%C2%BFComo%20est%C3%A1s?" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/jeison-camilo-montiel-collazos-660729166/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/MontielDev" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Camilo Montiel</b> - Todos los Derechos Reservados. </small>
+        </div>
+    </footer>
 
 
     <script src="JS/main.js"></script>
