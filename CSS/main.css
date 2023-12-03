@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -55,7 +56,7 @@ html::-webkit-scrollbar-thumb {
 .contenedor-header header .logo a {
     font-family: 'Righteous';
     color: var(--verde);
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .contenedor-header header ul {
@@ -108,7 +109,8 @@ html::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
     url(/IMG/background.png);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     color: var(--blanco);
     display: flex;
     align-items: center;
@@ -174,27 +176,60 @@ html::-webkit-scrollbar-thumb {
 .about_me h2 {
     font-size: 48px;
     text-align: center;
-    padding: 20px 0;
+    font-family: 'Righteous';
+    padding: 30px 0;
 }
 
 .about_me .contenido-seccion p {
     display: flex;
     justify-content: center;
-    font: 18px;
-    line-height: 22px;
+    line-height: 20px;
     margin: 20px 0px 40px 0px;
     width: 100%;
 }
 
 .about_me .contenido-seccion p span {
     color: var(--verde);
-    font-size: 20px;
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 90%;
+    width: 100%;
     letter-spacing: 3px;
+}
+
+.about_me h3 {
+    font-size: 26px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about_me .contenido-seccion .versions {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0px 30px 0px;
+}
+
+.about_me .contenido-seccion .versions p {
+    display: flex;
+    justify-content: center;
+    font: 18px;
+    height: 2px;
+    width: 100%;
+}
+
+.about_me .contenido-seccion .versions p i {
+    margin: 0 30px 0 50px;
+}
+
+.about_me .contenido-seccion .versions p span {
+    color: var(--verde);
+    font-size: 18px;
+    display: flex;
+    width: 400px;
+    justify-content: flex-start;
 }
 
 .about_me .cv {
@@ -232,6 +267,8 @@ html::-webkit-scrollbar-thumb {
 .about_me button:hover .overlay {
     width: 100%;
 }
+
+
 
 /* SECTION SKILLS */
 
@@ -380,7 +417,7 @@ html::-webkit-scrollbar-thumb {
 
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 60%;}
+    100%{width: 65%;}
 }
 
 .skills .skill .htmlcss{
@@ -507,6 +544,7 @@ html::-webkit-scrollbar-thumb {
 .curriculum .fila {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .curriculum .fila .col {
@@ -925,6 +963,7 @@ footer .grupo-2 small {
 } 
 
 @media screen and (max-width:700px) {
+    
     .skills .fila {
         display: block;
     }
