@@ -223,8 +223,16 @@ html::-webkit-scrollbar-thumb {
 
 .about_me .contenido-seccion .versions {
     display: flex;
-    flex-direction: column;
     margin: 80px 0px 30px 0px;
+    justify-content: center;
+    width: 100%;
+}
+
+.about_me .contenido-seccion .versions1 {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    width: auto;
 }
 
 .about_me .contenido-seccion .versions p {
@@ -233,6 +241,7 @@ html::-webkit-scrollbar-thumb {
     font: 18px;
     height: 2px;
     width: 100%;
+    
 }
 
 .about_me .contenido-seccion .versions p i {
@@ -243,7 +252,6 @@ html::-webkit-scrollbar-thumb {
     color: var(--verde);
     font-size: 18px;
     display: flex;
-    width: 400px;
     justify-content: flex-start;
 }
 
