@@ -12,6 +12,7 @@
 
 :root {
     --blanco: #fff;
+    --black: #000;
     --azul-oscuro: #1e2326;
     --azul-oscuro2: #252A2E;
     --gris-oscuro: #131517;
@@ -42,6 +43,7 @@ html::-webkit-scrollbar-thumb {
     top: 0;
     left: 0;
     z-index: 99;
+    
 }
 
 .contenedor-header header {
@@ -51,6 +53,8 @@ html::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--azul-oscuro);
 }
 
 .contenedor-header header .logo a {
@@ -122,8 +126,8 @@ html::-webkit-scrollbar-thumb {
     max-width: 350px;
     margin: auto;
     text-align: center;
-    border-radius: 50px;
-    border: 4px solid var(--verde);
+    border-radius: 30px;
+    border: 2px solid var(--verde);
 }
 
 .inicio .contenido-banner img {
@@ -376,9 +380,8 @@ html::-webkit-scrollbar-thumb {
     margin: 50px 0 30px 0;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     justify-content: center;
-    /* padding: 0 100px 0 20px; */
 }
 
 .skills .english-progress h3 {
@@ -397,50 +400,50 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     background-color: var(--verde);
-    right: 85.72%;
+    right: 94%;
     top: 0px;
     border-radius: 0 0 10px 10px;
-    padding: 0 25px;
+    padding: 0 35px;
 }
 
 .skills .english-progress .barra-skill .span2 {
     display: flex;
     justify-content: center;
     background-color: var(--verde);
-    right: 71.44%;
+    right: 74%;
     top: 0px;
     border-radius: 0 0 10px 10px;
-    padding: 0 25px;
+    padding: 0 35px;
 }
 
 .skills .english-progress .barra-skill .span3 {
     display: flex;
     justify-content: center;
     background-color: var(--gris-oscuro);
-    left: 57.16%;
+    left: 54%;
     top: 0px;
     border-radius: 0 0 10px 10px;
-    padding: 0 25px;
+    padding: 0 35px;
 }
 
 .skills .english-progress .barra-skill .span4 {
     display: flex;
     justify-content: center;
     background-color: var(--gris-oscuro);
-    left: 71.44%;
+    left: 74%;
     top: 0px;
     border-radius: 0 0 10px 10px;
-    padding: 0 25px;
+    padding: 0 35px;
 }
 
 .skills .english-progress .barra-skill .span5 {
     display: flex;
     justify-content: center;
     background-color: var(--gris-oscuro);
-    left: 85.72%;
+    left: 94%;
     top: 0px;
     border-radius: 0 0 10px 10px;
-    padding: 0 25px;
+    padding: 0 35px;
 }
 
 .skills .skill .javascript {
@@ -550,7 +553,7 @@ html::-webkit-scrollbar-thumb {
 
 @keyframes english {
     0%{width: 0%;}
-    100%{width: 42.88%;}
+    100%{width: 41%;}
 }
 
 
@@ -711,12 +714,12 @@ html::-webkit-scrollbar-thumb {
 }
 
 .portfolio .galeria {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin: 30px 10px;
+    gap: 40px;
+    margin: 20px 20px;
 }
 
 .portfolio .container-proyect {
@@ -727,7 +730,6 @@ html::-webkit-scrollbar-thumb {
     align-items: center;
     border: 1px solid rgba(5, 5, 5, 0.2);
     border-radius: 10px;
-    /* background: linear-gradient(rgba(28, 182, 152, .1), rgba(28, 182, 152, .1)); */
     background-color: var(--azul-oscuro);
 }
 
@@ -749,7 +751,7 @@ html::-webkit-scrollbar-thumb {
     width: 60%;
 }
 
-.portfolio .container-proyect p {
+.portfolio .container-proyect .tech {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -759,8 +761,8 @@ html::-webkit-scrollbar-thumb {
 
 .portfolio .container-proyect h3, 
 .portfolio .container-proyect hr,
-.portfolio .container-proyect p,
-.portfolio .container-proyect span {
+.portfolio .container-proyect .tech-titles,
+.portfolio .container-proyect .tech-titles span {
     display: none;
 }
 
@@ -790,25 +792,42 @@ html::-webkit-scrollbar-thumb {
     width: 100%;
     min-height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(28, 182, 152, .8), rgba(28, 182, 152, .8));
+    background: linear-gradient(rgba(28, 182, 151, 0.9), rgba(28, 182, 152, 0.9));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 0.5s;
+    transition: 0.7s;
     font-size: 18px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     opacity: 0;
     border-radius: 10px;
     color: var(--blanco);
     padding: 0px 5px;
 }
 
+.portfolio .galeria .proyecto .overlay .hr2 {
+    
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.portfolio .galeria .proyecto .overlay hr {
+    width: 20%;
+    display: flex;
+    border: 1px solid var(--azul-oscuro2);
+}
+
 .portfolio .galeria .proyecto .overlay h3 {
-    margin-bottom: 20px;
-    transition: 0.5s;
+    margin-bottom: 100px;
+    transition: 0.7s;
     color: var(--blanco);
     display: flex;
     justify-content: center;
+    font-size: large;
 }
 
 .portfolio .galeria .proyecto .overlay:hover {
@@ -816,7 +835,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .portfolio .galeria .proyecto .overlay:hover h3 {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .portfolio .container-proyect .redes {
@@ -1007,9 +1026,8 @@ footer .grupo-2 small {
         align-items: center;
         position: absolute;
         right: 0;
-        top: 75px;
+        top: 70px;
         background-color: rgba(0, 0, 0, 0.874) ;
-        width: 180px;
         width: 100%;
         height: 100vh;
     }
@@ -1046,20 +1064,24 @@ footer .grupo-2 small {
     }
 
     .portfolio .container-proyect {
-        height: 560px;
-        justify-content: end;
+        height: 580px;
+        justify-content: flex-end;
     }
 
     .portfolio .container-proyect h3,
-    .portfolio .container-proyect p,
-    .portfolio .container-proyect span,
+    .portfolio .container-proyect .tech-titles,
+    .portfolio .container-proyect .tech-titles span,
     .portfolio .container-proyect hr {
         display: flex;
     }
 
     .portfolio .container-proyect .hr,
-    .portfolio .container-proyect p {
+    .portfolio .container-proyect .tech-titles {
         margin-bottom: 10px;
+    }
+
+    .portfolio .galeria .proyecto .overlay {
+        display: none;
     }
 }
 
@@ -1129,5 +1151,11 @@ footer .grupo-2 small {
 
     .contact .fila .col input, textarea {
         min-width: 90%;
+    }
+}
+
+@media screen and (max-width:693px) {
+    .portfolio .container-proyect {
+        height: auto;
     }
 }
