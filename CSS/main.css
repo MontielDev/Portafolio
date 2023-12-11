@@ -830,7 +830,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .portfolio .galeria .proyecto .overlay h3 {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     transition: 0.5s;
     color: var(--blanco);
     display: flex;
