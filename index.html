@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="JS/jquery-3.6.4.js"></script>
-    <title>Camilo Developer</title>
+    <title>Camilo Montiel Dev</title>
     <link rel="stylesheet" href="./CSS/main.css"">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#Start">Camilo Montiel</a>
+                <a class="desplazar" href="#start" onclick="seleccionar()">Camilo Montiel</a>
             </div>
             <nav id="nav" onclick="seleccionar()">
                 <ul>
@@ -395,20 +395,41 @@
             <div class="fila">
                 <!-- Form -->
                 <div class="col">
-                    <form action="https://formsubmit.co/22519c7bde277309264bc2822ff487eb" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input maxlength="10" minlength="4" type="number" name="phone" placeholder="Phone Number" pattern="[0-9]+" required>
-                        <input type="text" name="email" placeholder="Email" required>
-                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <form method="POST">
+                        <input type="text" name="name" id="'name" placeholder="Your Name" required>
+                        <input maxlength="10" minlength="4" type="number" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]+" required>
+                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                         <button id="btn" type="submit"> 
                             Send Message <i class="fa-solid fa-paper-plane"></i>
                             <span class="overlay"></span>
                         </button>  
-
-                        <input type="hidden" name="_next" value="https://glittery-manatee-2c0396.netlify.app/">
-                        <input type="hidden" name="_captcha" value="false">
                     </form>
                     
+                    <script src="https://smtpjs.com/v3/smtp.js">
+                    </script>
+
+                    <script>
+                        var btn = document.getElementById('btn');
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault()
+                            var name = document.getElementById('name').value;
+                            var phone = document.getElementById('phone').value;
+                            var email = document.getElementById('email').value;
+                            var message = document.getElementById('message').value;
+                            var body = 'name: '+ name + '<br/> phone: ' + phone + '<br/> email: ' + email + '<br/> message: ' + message;
+
+                            Email.send({
+                                SecureToken : "A5D5DE195EF6B377EC8A8B5247F21DA4CA6F",
+                                To : 'kmilodeoz4455@gmail.com',
+                                From : "camilobmx99@hotmail.com",
+                                Subject : "contact message",
+                                Body : body
+                            }).then(
+                                message => alert(message)
+                            );
+                        })
+                    </script>
                 </div>
             </div>
         </div>

@@ -106,6 +106,7 @@ html::-webkit-scrollbar-thumb {
     display: none;
 }
 
+
 /* SECTION INICIO */
 
 
@@ -113,6 +114,7 @@ html::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)),
     url(/IMG/background.png);
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
     height: auto;
     color: var(--blanco);
@@ -806,12 +808,10 @@ html::-webkit-scrollbar-thumb {
 }
 
 .portfolio .galeria .proyecto .overlay .hr2 {
-    
     width: 100%;
     margin: 20px 0;
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
 }
 
@@ -1154,8 +1154,12 @@ footer .grupo-2 small {
     }
 }
 
-@media screen and (max-width:693px) {
+@media screen and (max-width:719px) {
     .portfolio .container-proyect {
         height: auto;
+    }
+
+    .portfolio .container-proyect h3 {
+        margin: 20px 5px;
     }
 }
