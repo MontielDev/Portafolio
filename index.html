@@ -7,6 +7,15 @@
     <script src="JS/jquery-3.6.4.js"></script>
     <title>Camilo Montiel Dev</title>
     <link rel="stylesheet" href="./CSS/main.css"">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("afxfxqaS-snCaAPQL");
+        })();
+    </script>
+    <script src="JS/main.js"></script>
 </head>
 <body>
     
@@ -364,7 +373,7 @@
                         </p>
 
                     <div class="proyecto">
-                        <a href="https://e-commerse-b.netlify.app/" target="_blank">
+                        <a href="https://ecommerce-store-01.netlify.app/" target="_blank">
                         <img src="IMG/E-commerce.jpg" alt="e-commerce_img">
                             <div class="overlay">
                                 <h3>E-commerce</h3>
@@ -381,8 +390,8 @@
                     </div>
 
                     <div class="redes">
-                        <a href="https://github.com/MontielDev/E-commerce" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://e-commerse-b.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/MontielDev/Ecommerse" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://ecommerce-store-01.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
 
@@ -397,41 +406,21 @@
             <div class="fila">
                 <!-- Form -->
                 <div class="col">
-                    <form method="POST">
+                    <form action="https://formsubmit.co/camilobmx99@hotmail.com" method="POST">
                         <input type="text" name="name" id="'name" placeholder="Your Name" required>
                         <input maxlength="10" minlength="4" type="number" name="phone" id="phone" placeholder="Phone Number" pattern="[0-9]+" required>
-                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                        <button id="btn" type="submit"> 
+                        <button id="btn" type="submit">
                             Send Message <i class="fa-solid fa-paper-plane"></i>
                             <span class="overlay"></span>
                         </button>  
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://camilomdev.netlify.app">
                     </form>
-                    
-                    <script src="https://smtpjs.com/v3/smtp.js">
-                    </script>
 
-                    <script>
-                        var btn = document.getElementById('btn');
-                        btn.addEventListener('click', function(e) {
-                            e.preventDefault()
-                            var name = document.getElementById('name').value;
-                            var phone = document.getElementById('phone').value;
-                            var email = document.getElementById('email').value;
-                            var message = document.getElementById('message').value;
-                            var body = 'name: '+ name + '<br/> phone: ' + phone + '<br/> email: ' + email + '<br/> message: ' + message;
-
-                            Email.send({
-                                SecureToken : "A5D5DE195EF6B377EC8A8B5247F21DA4CA6F",
-                                To : 'kmilodeoz4455@gmail.com',
-                                From : "camilobmx99@hotmail.com",
-                                Subject : "contact message",
-                                Body : body
-                            }).then(
-                                message => alert(message)
-                            );
-                        })
-                    </script>
                 </div>
             </div>
         </div>
@@ -452,9 +441,5 @@
         </div>
     </footer>
 
-
-    <!-- Me encanta crear sitios web que brinden una experiencia de usuario única y satisfatoria, soy una persona autodidacta, responsable y comprometida, constantemente estoy aprendiendo nuevas tecnologias y herramientas para mejorar mis habilidades-->
-
-    <script src="JS/main.js"></script>
 </body>
 </html>
