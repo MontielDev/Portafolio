@@ -838,6 +838,16 @@ html::-webkit-scrollbar-thumb {
     font-size: large;
 }
 
+.portfolio .galeria .container-proyect .tit {
+    font-size: 14px;
+    display: none;
+}
+
+.portfolio .galeria .proyecto .overlay .tit {
+    display: flex;
+    justify-content: center;
+}
+
 .portfolio .galeria .proyecto .overlay:hover {
     opacity: 1;
 }
@@ -1090,6 +1100,11 @@ footer .grupo-2 small {
 
     .portfolio .galeria .proyecto .overlay {
         display: none;
+    }
+
+    .portfolio .galeria .container-proyect .tit {
+        display: flex;
+        padding-bottom: 10px;
     }
 }
 
